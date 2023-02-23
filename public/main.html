@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("bg.png");
+            margin: 0;
+            padding: 0;
+        }
+
+        body .bg-temp {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            width: 100vw;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 4rem;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+
+        body b {
+            background-color: #fff;
+            padding: 10rem;
+            border-radius: 1rem;
+        }
+
+        body button{
+            background-color: #198754;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+        }
+
+        @media screen and (max-width: 768px) {
+            body .bg-temp {
+                font-size: 1rem;
+                text-align: center;
+
+            }
+
+            body b {
+                padding: 1rem 0;
+                width: 90%;
+                margin: 7.5rem 0 15rem 0 ;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-temp">
+        <b>
+            Diyetisyen Melisa Özcan 
+        </b>
+            <a href="../public/index.html">
+                <button>
+                    Kayıt Ol
+                </button>
+            </a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+#card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .card-personal-first{
+    .input-container {
+        position: relative;
+  
+        input.text-input {
+          border: none;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          outline: none;
+          border-radius: 0.3rem;
+          padding: 0.4rem;
+          width: 100%;
+          &:focus + label,
+          &:valid + label {
+            top: -1rem;
+            color: #14A44D;
+            padding: 0 0.2rem;
+            font-weight: bold;
+            background-color: #fff;
+          }
+          &:focus,
+          &:valid {
+            border: 2px solid #198754;
+          }
+        }
+        label {
+          position: absolute;
+          top: 5px;
+          left: 1.5rem;
+          color: #777;
+          transition: all 0.2s ease-in-out;
+        }
+
+        textarea{
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            outline: none;
+            border-radius: 0.3rem;
+            padding: 0.4rem;
+            resize: none;
+            width: 100%;
+            &:focus + label,
+            &:valid + label {
+              top: -3rem;
+              left: 0;
+              color: #198754;
+              padding: 0 0rem;
+              font-weight: bold;
+              background-color: #fff;
+            }
+            &:focus,
+            &:valid {
+              border: 2px solid #198754;
+            }
+       
+        }
+      }
+  }
+  .card-personal-first,
+  .card-personal-second {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+
+    .file-input {
+      position: relative;
+      input {
+        display: none;
+        &:valid + label {
+          border: 2px solid #198754;
+          color: #198754;
+         box-shadow:none;
+         font-weight: bold;
+        }
+      }
+      label {
+        color: #777;
+        transition: all 0.2s ease-in-out;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        outline: none;
+        border-radius: 0.3rem;
+        padding: 0.4rem;
+        width: 100%;
+      }
+    }
+
+    //mobile göre yazuldı
+
+  }
+
+  .card-personal-second{
+    label{
+        margin-bottom: 1rem;
+        width: 100%;
+        border-radius: .3rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        padding: .3rem 0;
+    }
+
+    .input-container{
+        width: 100%;
+        display: flex;
+        position: relative;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+        label{
+            padding-left: .5rem;
+        }
+        select{
+            height: 33px;
+            border: #fff;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
+            outline: none;
+        }
+    }
+
+    .input-group-container{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+  
+        .input1,.input2{
+            input:first-child{
+                display: none;
+            }
+            input:last-child{
+                display: none;
+                border: 1px solid #198754;
+                outline: none;
+                padding: 0.2rem;
+                border-radius: 0 0 0.3rem 0.3rem;
+                width: 100%;
+            }
+        }
+        .input2 label{
+            border: 1px solid  #ff6347;
+            background-color: tomato;
+            color: #fff;
+            border-radius: .3rem .3rem 0 0;
+        }
+        .input1 label{
+            border: 1px solid  #198754;
+            background-color: #198754;
+            color: #fff;
+            border-radius: .3rem .3rem 0 0;
+        }
+        .input1 label , .input2 label{
+            cursor: pointer;
+            margin-right: .5rem;
+            padding: 0 1.5rem;
+            width: 100%;
+            margin-bottom: 0rem;
+        }
+        
+
+    }
+
+    button{
+        font-weight: bold;
+    }
+  }
+}
