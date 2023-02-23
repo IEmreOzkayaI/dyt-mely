@@ -10,7 +10,7 @@ export default function Card() {
   const [age, setAge] = useState("");
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
-  const [file, setFile] = useState("");
+  // const [file, setFile] = useState("");
 
   const [disaster, setDisaster] = useState("");
   const [familDisaster, setFamilDisaster] = useState("");
@@ -62,9 +62,9 @@ export default function Card() {
   const [specialNote, setSpecialNote] = useState("");
 
   const handleSubmit = (e) => {
-    let formdata = new FormData();
+    // let formdata = new FormData();
     e.preventDefault();
-    formdata.append("file", file);
+    // formdata.append("file", file);
 
     const Customer = {
       nameSurname: nameSurname ,
@@ -119,8 +119,8 @@ export default function Card() {
       sportHistory: sportHistory ==="" ? "Yok" : sportHistory,
       specialNote: specialNote ==="" ? "Yok" : specialNote,
     };
-    console.log(file);
-    console.log(Customer);
+    // console.log(file);
+    // console.log(Customer);
     
 
     
@@ -134,14 +134,14 @@ export default function Card() {
     }
   };
 
-  function fileValidation(e) {
-    setFile(e.target.files[0]);
+  // function fileValidation(e) {
+  //   setFile(e.target.files[0]);
 
-    var el = document.getElementById("file");
-    if (el.value != null) {
-      document.getElementById("file-label").innerHTML = "Dosya Seçildi";
-    }
-  }
+  //   var el = document.getElementById("file");
+  //   if (el.value != null) {
+  //     document.getElementById("file-label").innerHTML = "Dosya Seçildi";
+  //   }
+  // }
   function checkValidationYes(id1, id2) {
     var el1 = document.getElementById(id1);
     var el2 = document.getElementById(id2);
