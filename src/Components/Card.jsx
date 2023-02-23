@@ -135,7 +135,7 @@ export default function Card() {
       let formService = new FormService();
       formService
         .postPreRegister(Customer)
-        .then(result => console.log("gönderildi") , history.pushState("/final"));
+        .then(result => console.log("gönderildi") , history("/final"));
     }
   };
 
