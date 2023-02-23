@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../Components/Card.scss";
 import FormService from "../Services/FormService";
+import { useNavigate } from "react-router-dom";
+
 export default function Card() {
   const [nameSurname, setNameSurname] = useState("");
   const [gender, setGender] = useState("");
@@ -61,9 +63,13 @@ export default function Card() {
 
   const [specialNote, setSpecialNote] = useState("");
 
+
+  const history = useNavigate();
+
+
   const handleSubmit = (e) => {
     // let formdata = new FormData();
-    e.preventDefault();
+    // e.preventDefault();
     // formdata.append("file", file);
 
     const Customer = {
@@ -123,14 +129,13 @@ export default function Card() {
     // console.log(Customer);
     
 
-    
     let validate = true;
     if (validate) {
       // clear inputs
       let formService = new FormService();
       formService
         .postPreRegister(Customer)
-        .then((result) => console.log(result));
+        .then(result => console.log("gönderildi") , history.pushState("/final"));
     }
   };
 
@@ -1539,12 +1544,7 @@ export default function Card() {
               ></textarea>
             </div>
           </div>
-          <input
-            type="hidden"
-            name="_next"
-            value="https://dyt-melisaozcan.netlify.app/thanks.html"
-          />
-          <input type="hidden" name="_captcha" value="false" />
+
           <button
             type="submit"
             className="btn btn-success w-100"
