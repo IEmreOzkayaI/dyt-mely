@@ -2,40 +2,40 @@
     background-image: url("../../public/bg.png");
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
-.final .bg-temp{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 4rem;
-    background-color: rgba(0, 0, 0, .5);
-}
-
-
-.final b {
-    background-color: #198754;
-    padding: 2rem;
-    border-radius: 1rem;
-    color: #fff;
+    .bg-temp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 4rem;
+        background-color: rgba(0, 0, 0, .5);
+        b{
+            width: 90%;
+            background-color: #198754;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            border: 1px solid #fff;
+            font-size: 3rem;
+    
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
     .final .bg-temp {
         font-size: 1.5rem;
         text-align: center;
-        
-    }
-    .final b {
-        padding: 1rem 0;
-        width: 90%;
-    }
-}
-    
 
+        b{
+            font-size: 1.5rem;
+            padding:  .4rem;
+        }
+    }
+
+}
