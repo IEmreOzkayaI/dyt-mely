@@ -62,7 +62,6 @@ export default function Card() {
   const [sportHistory, setSportHistory] = useState("");
 
   const [specialNote, setSpecialNote] = useState("");
-  let alertAction = false;
 
   const history = useNavigate();
   let validate = false;
@@ -84,8 +83,8 @@ export default function Card() {
       allergie: allergie,
       morningTime: morningTime,
       nightTime: nightTime,
-      regl: regl == "" ? "Yok" : regl,
-      toilet: toilet == "" ? "Yok" : toilet,
+      regl: regl === "" ? "Yok" : regl,
+      toilet: toilet === "" ? "Yok" : toilet,
       digestiveProblem: digestiveSystem,
       badFood: food,
       badDrink: drink,
@@ -95,7 +94,7 @@ export default function Card() {
       possibleDailyMealAmount: possibleDailyMealAmount,
       essentialFood: essentialFood,
       unlikedFood: unlikedFood,
-      fastEat: fastEat == "" ? "Yok" : fastEat,
+      fastEat: fastEat === "" ? "Yok" : fastEat,
       cheatAmount: cheatMealAmount,
       cheatReason: cheatMealReason,
       water: water,
@@ -129,7 +128,6 @@ export default function Card() {
         .postPreRegister(Customer)
         .then((result) => console.log(result.data), history("/form-file"));
     } else {
-      alertAction = true;
       setAlertValidation(true);
     }
   };
@@ -761,7 +759,7 @@ export default function Card() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> 
 
           <div className="card-personal-second">
             <h3 className="mb-3">Sindirim Sistemi</h3>

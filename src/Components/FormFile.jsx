@@ -26,7 +26,7 @@ export default function Final() {
     let formService = new FormService();
     formService
       .postPreRegister2(formdata)
-      .then(result =>(console.log(result.data),result.data==="form sent" ? history("/form-final") : setSpinActive(true) ));
+      .then(result =>(result.data==="form sent" ? history("/form-final") : setSpinActive(true) ));
   }
   return (
     <div className="final">
